@@ -14,6 +14,14 @@
 		A00BE4EF28B5444900D10216 /* PlantsPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE4EE28B5444900D10216 /* PlantsPlannerTests.swift */; };
 		A00BE4F928B5444900D10216 /* PlantsPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE4F828B5444900D10216 /* PlantsPlannerUITests.swift */; };
 		A00BE4FB28B5444900D10216 /* PlantsPlannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE4FA28B5444900D10216 /* PlantsPlannerUITestsLaunchTests.swift */; };
+		A00BE50828B54DE500D10216 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE50728B54DE500D10216 /* CircleImage.swift */; };
+		A00BE50A28B54F3300D10216 /* BgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE50928B54F3300D10216 /* BgView.swift */; };
+		A00BE50C28B554D300D10216 /* PlantsData.json in Resources */ = {isa = PBXBuildFile; fileRef = A00BE50B28B554D300D10216 /* PlantsData.json */; };
+		A00BE50E28B5551100D10216 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE50D28B5551100D10216 /* Plant.swift */; };
+		A00BE51028B5584000D10216 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE50F28B5584000D10216 /* ModelData.swift */; };
+		A00BE51528B55A1C00D10216 /* PlantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51428B55A1C00D10216 /* PlantRow.swift */; };
+		A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51828B55EDD00D10216 /* PlantList.swift */; };
+		A00BE51B28B5603800D10216 /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51A28B5603800D10216 /* PlantDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,14 @@
 		A00BE4F428B5444900D10216 /* PlantsPlannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlantsPlannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00BE4F828B5444900D10216 /* PlantsPlannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsPlannerUITests.swift; sourceTree = "<group>"; };
 		A00BE4FA28B5444900D10216 /* PlantsPlannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsPlannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A00BE50728B54DE500D10216 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		A00BE50928B54F3300D10216 /* BgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgView.swift; sourceTree = "<group>"; };
+		A00BE50B28B554D300D10216 /* PlantsData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PlantsData.json; sourceTree = "<group>"; };
+		A00BE50D28B5551100D10216 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		A00BE50F28B5584000D10216 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		A00BE51428B55A1C00D10216 /* PlantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRow.swift; sourceTree = "<group>"; };
+		A00BE51828B55EDD00D10216 /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
+		A00BE51A28B5603800D10216 /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				A00BE4DD28B5444400D10216 /* PlantsPlannerApp.swift */,
-				A00BE4DF28B5444400D10216 /* ContentView.swift */,
+				A00BE51128B558CE00D10216 /* Views */,
+				A00BE51328B5594500D10216 /* Model */,
+				A00BE51228B5591800D10216 /* Resources */,
 				A00BE4E128B5444800D10216 /* Assets.xcassets */,
 				A00BE4E328B5444800D10216 /* Preview Content */,
 			);
@@ -125,6 +143,36 @@
 				A00BE4FA28B5444900D10216 /* PlantsPlannerUITestsLaunchTests.swift */,
 			);
 			path = PlantsPlannerUITests;
+			sourceTree = "<group>";
+		};
+		A00BE51128B558CE00D10216 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A00BE50728B54DE500D10216 /* CircleImage.swift */,
+				A00BE50928B54F3300D10216 /* BgView.swift */,
+				A00BE4DF28B5444400D10216 /* ContentView.swift */,
+				A00BE51428B55A1C00D10216 /* PlantRow.swift */,
+				A00BE51828B55EDD00D10216 /* PlantList.swift */,
+				A00BE51A28B5603800D10216 /* PlantDetail.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A00BE51228B5591800D10216 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A00BE50B28B554D300D10216 /* PlantsData.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A00BE51328B5594500D10216 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A00BE50D28B5551100D10216 /* Plant.swift */,
+				A00BE50F28B5584000D10216 /* ModelData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A00BE50C28B554D300D10216 /* PlantsData.json in Resources */,
 				A00BE4E528B5444800D10216 /* Preview Assets.xcassets in Resources */,
 				A00BE4E228B5444800D10216 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +308,13 @@
 			files = (
 				A00BE4E028B5444400D10216 /* ContentView.swift in Sources */,
 				A00BE4DE28B5444400D10216 /* PlantsPlannerApp.swift in Sources */,
+				A00BE51528B55A1C00D10216 /* PlantRow.swift in Sources */,
+				A00BE50E28B5551100D10216 /* Plant.swift in Sources */,
+				A00BE50828B54DE500D10216 /* CircleImage.swift in Sources */,
+				A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */,
+				A00BE51B28B5603800D10216 /* PlantDetail.swift in Sources */,
+				A00BE50A28B54F3300D10216 /* BgView.swift in Sources */,
+				A00BE51028B5584000D10216 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
