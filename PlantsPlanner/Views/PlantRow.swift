@@ -12,12 +12,16 @@ struct PlantRow: View {
     
     var body: some View {
         HStack {
-           plant.image
+            plant.image
                .resizable()
                .frame(width: 50, height: 50)
-           Text(plant.name)
+            Text(plant.name)
 
-           Spacer()
+            Spacer()
+            
+            if plant.isFavorite {
+               Image(systemName: "star.fill")
+            }
        }
     }
 }
