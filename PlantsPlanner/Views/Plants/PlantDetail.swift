@@ -8,8 +8,13 @@
 import SwiftUI
 
 struct PlantDetail: View {
-    
+
+    @EnvironmentObject var modelData: ModelData
     var plant: Plant
+    
+    var PlantIndex: Int {
+        modelData.Plants.firstIndex(where: { $0.id == plant.id })!
+    }
     
     var body: some View {
         ScrollView {
@@ -28,8 +33,7 @@ struct PlantDetail: View {
                     Text(plant.category)
                         .font(.subheadline)
                     Spacer()
-                    Text(plant.category)
-                        .font(.subheadline)
+                    FavoriteButton(isSet: $modelData.Plants[PlantIndex].isFavorite)
                 }
                 
                 Divider()
@@ -50,7 +54,11 @@ struct PlantDetail: View {
 }
 
 struct PlantDetail_Previews: PreviewProvider {
+
+    static let modelData = ModelData()
+
     static var previews: some View {
-        PlantDetail(plant: Plants[1])
+        PlantDetail(plant: ModelData().Plants[0])
+            .environmentObject(modelData)
     }
 }

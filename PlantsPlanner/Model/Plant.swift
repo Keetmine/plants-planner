@@ -13,9 +13,12 @@ struct Plant: Hashable, Codable, Identifiable {
     var name: String
     var category: String
     var description: String
+    var isFavorite: Bool
+
     
     private var imageName: String
      var image: Image {
          Image(imageName)
      }
 }
+    

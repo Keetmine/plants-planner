@@ -22,6 +22,7 @@
 		A00BE51528B55A1C00D10216 /* PlantRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51428B55A1C00D10216 /* PlantRow.swift */; };
 		A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51828B55EDD00D10216 /* PlantList.swift */; };
 		A00BE51B28B5603800D10216 /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51A28B5603800D10216 /* PlantDetail.swift */; };
+		A00BE51D28B6CE1A00D10216 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51C28B6CE1A00D10216 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		A00BE51428B55A1C00D10216 /* PlantRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantRow.swift; sourceTree = "<group>"; };
 		A00BE51828B55EDD00D10216 /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
 		A00BE51A28B5603800D10216 /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
+		A00BE51C28B6CE1A00D10216 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,12 +150,9 @@
 		A00BE51128B558CE00D10216 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A00BE50728B54DE500D10216 /* CircleImage.swift */,
-				A00BE50928B54F3300D10216 /* BgView.swift */,
 				A00BE4DF28B5444400D10216 /* ContentView.swift */,
-				A00BE51428B55A1C00D10216 /* PlantRow.swift */,
-				A00BE51828B55EDD00D10216 /* PlantList.swift */,
-				A00BE51A28B5603800D10216 /* PlantDetail.swift */,
+				A00BE51F28B6CF6500D10216 /* Plants */,
+				A00BE51E28B6CF4E00D10216 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,6 +172,26 @@
 				A00BE50F28B5584000D10216 /* ModelData.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A00BE51E28B6CF4E00D10216 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A00BE50728B54DE500D10216 /* CircleImage.swift */,
+				A00BE50928B54F3300D10216 /* BgView.swift */,
+				A00BE51C28B6CE1A00D10216 /* FavoriteButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A00BE51F28B6CF6500D10216 /* Plants */ = {
+			isa = PBXGroup;
+			children = (
+				A00BE51428B55A1C00D10216 /* PlantRow.swift */,
+				A00BE51828B55EDD00D10216 /* PlantList.swift */,
+				A00BE51A28B5603800D10216 /* PlantDetail.swift */,
+			);
+			path = Plants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +328,7 @@
 				A00BE4E028B5444400D10216 /* ContentView.swift in Sources */,
 				A00BE4DE28B5444400D10216 /* PlantsPlannerApp.swift in Sources */,
 				A00BE51528B55A1C00D10216 /* PlantRow.swift in Sources */,
+				A00BE51D28B6CE1A00D10216 /* FavoriteButton.swift in Sources */,
 				A00BE50E28B5551100D10216 /* Plant.swift in Sources */,
 				A00BE50828B54DE500D10216 /* CircleImage.swift in Sources */,
 				A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */,

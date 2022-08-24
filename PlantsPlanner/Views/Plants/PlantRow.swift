@@ -21,20 +21,22 @@ struct PlantRow: View {
             
             if plant.isFavorite {
                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
             }
        }
     }
 }
 
 struct PlantRow_Previews: PreviewProvider {
+    
+    static var Plants = ModelData().Plants
+    
     static var previews: some View {
         Group {
             PlantRow(plant: Plants[0])
             PlantRow(plant: Plants[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
-
-        
 
     }
 }
