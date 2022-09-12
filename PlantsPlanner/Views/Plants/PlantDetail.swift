@@ -30,7 +30,7 @@ struct PlantDetail: View {
                 Text(plant.name)
                     .font(.title)
                 HStack {
-                    Text(plant.category)
+                    Text(plant.name)
                         .font(.subheadline)
                     Spacer()
                     FavoriteButton(isSet: $modelData.Plants[PlantIndex].isFavorite)

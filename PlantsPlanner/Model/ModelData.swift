@@ -10,6 +10,18 @@ import Combine
 
 final class ModelData: ObservableObject {
     @Published var Plants: [Plant] = load("PlantsData.json")
+    
+    
+    var features: [Plant] {
+        Plants.filter{$0.isFeatured}
+    }
+    
+    var categories: [String: [Plant]] {
+        Dictionary(
+            grouping: Plants,
+            by: {$0.category.rawValue}
+        )
+    }
 }
 
 
