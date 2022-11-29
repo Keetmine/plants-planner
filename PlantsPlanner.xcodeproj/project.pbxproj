@@ -66,7 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A00BE4DA28B5444400D10216 /* PlantsPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlantsPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00BE4DA28B5444400D10216 /* Floret.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Floret.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A00BE4DD28B5444400D10216 /* PlantsPlannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantsPlannerApp.swift; sourceTree = "<group>"; };
 		A00BE4DF28B5444400D10216 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A00BE4E128B5444800D10216 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		A00BE4DB28B5444400D10216 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A00BE4DA28B5444400D10216 /* PlantsPlanner.app */,
+				A00BE4DA28B5444400D10216 /* Floret.app */,
 				A00BE4EA28B5444900D10216 /* PlantsPlannerTests.xctest */,
 				A00BE4F428B5444900D10216 /* PlantsPlannerUITests.xctest */,
 			);
@@ -320,7 +320,7 @@
 			);
 			name = PlantsPlanner;
 			productName = PlantsPlanner;
-			productReference = A00BE4DA28B5444400D10216 /* PlantsPlanner.app */;
+			productReference = A00BE4DA28B5444400D10216 /* Floret.app */;
 			productType = "com.apple.product-type.application";
 		};
 		A00BE4E928B5444900D10216 /* PlantsPlannerTests */ = {
@@ -628,6 +628,8 @@
 				DEVELOPMENT_TEAM = TD3YK7MW75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Floret;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -639,7 +641,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keetmine.PlantsPlanner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Floret;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -657,6 +659,8 @@
 				DEVELOPMENT_TEAM = TD3YK7MW75;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Floret;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -668,7 +672,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = keetmine.PlantsPlanner;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Floret;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
