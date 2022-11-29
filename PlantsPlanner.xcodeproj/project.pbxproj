@@ -23,6 +23,9 @@
 		A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51828B55EDD00D10216 /* PlantList.swift */; };
 		A00BE51B28B5603800D10216 /* PlantDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51A28B5603800D10216 /* PlantDetail.swift */; };
 		A00BE51D28B6CE1A00D10216 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00BE51C28B6CE1A00D10216 /* FavoriteButton.swift */; };
+		A012C80129362A490059F91B /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012C80029362A490059F91B /* ProfileHost.swift */; };
+		A012C80329362BB80059F91B /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012C80229362BB80059F91B /* ProfileSummary.swift */; };
+		A012C80F29362DEA0059F91B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A012C80E29362DEA0059F91B /* Profile.swift */; };
 		A035673528CFA9A000F9B1E3 /* CategoryHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035673428CFA9A000F9B1E3 /* CategoryHome.swift */; };
 		A035673728CFACB200F9B1E3 /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035673628CFACB200F9B1E3 /* CategoryRow.swift */; };
 		A035673928CFAF7300F9B1E3 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035673828CFAF7300F9B1E3 /* CategoryItem.swift */; };
@@ -65,6 +68,9 @@
 		A00BE51828B55EDD00D10216 /* PlantList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantList.swift; sourceTree = "<group>"; };
 		A00BE51A28B5603800D10216 /* PlantDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetail.swift; sourceTree = "<group>"; };
 		A00BE51C28B6CE1A00D10216 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		A012C80029362A490059F91B /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
+		A012C80229362BB80059F91B /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
+		A012C80E29362DEA0059F91B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A035673428CFA9A000F9B1E3 /* CategoryHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryHome.swift; sourceTree = "<group>"; };
 		A035673628CFACB200F9B1E3 /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		A035673828CFAF7300F9B1E3 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		A00BE51128B558CE00D10216 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A012C7FF29362A2A0059F91B /* Profiles */,
 				A00BE4DF28B5444400D10216 /* ContentView.swift */,
 				A035673328CFA95300F9B1E3 /* Categories */,
 				A00BE51F28B6CF6500D10216 /* Plants */,
@@ -177,6 +184,7 @@
 			children = (
 				A00BE50D28B5551100D10216 /* Plant.swift */,
 				A00BE50F28B5584000D10216 /* ModelData.swift */,
+				A012C80E29362DEA0059F91B /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,6 +207,15 @@
 				A00BE51A28B5603800D10216 /* PlantDetail.swift */,
 			);
 			path = Plants;
+			sourceTree = "<group>";
+		};
+		A012C7FF29362A2A0059F91B /* Profiles */ = {
+			isa = PBXGroup;
+			children = (
+				A012C80029362A490059F91B /* ProfileHost.swift */,
+				A012C80229362BB80059F91B /* ProfileSummary.swift */,
+			);
+			path = Profiles;
 			sourceTree = "<group>";
 		};
 		A035673328CFA95300F9B1E3 /* Categories */ = {
@@ -344,13 +361,16 @@
 			files = (
 				A00BE4E028B5444400D10216 /* ContentView.swift in Sources */,
 				A00BE4DE28B5444400D10216 /* PlantsPlannerApp.swift in Sources */,
+				A012C80329362BB80059F91B /* ProfileSummary.swift in Sources */,
 				A00BE51528B55A1C00D10216 /* PlantRow.swift in Sources */,
 				A00BE51D28B6CE1A00D10216 /* FavoriteButton.swift in Sources */,
 				A035673528CFA9A000F9B1E3 /* CategoryHome.swift in Sources */,
 				A00BE50E28B5551100D10216 /* Plant.swift in Sources */,
 				A00BE50828B54DE500D10216 /* CircleImage.swift in Sources */,
 				A00BE51928B55EDD00D10216 /* PlantList.swift in Sources */,
+				A012C80F29362DEA0059F91B /* Profile.swift in Sources */,
 				A035673928CFAF7300F9B1E3 /* CategoryItem.swift in Sources */,
+				A012C80129362A490059F91B /* ProfileHost.swift in Sources */,
 				A00BE51B28B5603800D10216 /* PlantDetail.swift in Sources */,
 				A00BE50A28B54F3300D10216 /* BgView.swift in Sources */,
 				A035673728CFACB200F9B1E3 /* CategoryRow.swift in Sources */,
