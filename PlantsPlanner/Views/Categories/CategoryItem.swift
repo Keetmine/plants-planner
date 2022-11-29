@@ -28,6 +28,6 @@ struct CategoryItem: View {
 
 struct CategoryItem_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryItem(plant: ModelData().Plants[0])
+        CategoryItem(plant: ModelData().plants[0])
     }
 }

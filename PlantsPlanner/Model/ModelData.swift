@@ -9,19 +9,18 @@ import Foundation
 import Combine
 
 final class ModelData: ObservableObject {
-    @Published var Plants: [Plant] = load("PlantsData.json")
+    @Published var plants: [Plant] = load("PlantsData.json")
     var hikes: [Hike] = load("hikeData.json")
     @Published var profile = Profile.default
 
-    
     var features: [Plant] {
-        Plants.filter{$0.isFeatured}
+        plants.filter{ $0.isFeatured }
     }
     
     var categories: [String: [Plant]] {
         Dictionary(
-            grouping: Plants,
-            by: {$0.category.rawValue}
+            grouping: plants,
+            by: { $0.category.rawValue }
         )
     }
 }
@@ -31,8 +30,8 @@ func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
 
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)
-    else {
-        fatalError("Couldn't find \(filename) in main bundle.")
+        else {
+            fatalError("Couldn't find \(filename) in main bundle.")
     }
 
     do {

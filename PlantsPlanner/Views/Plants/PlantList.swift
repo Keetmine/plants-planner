@@ -13,7 +13,7 @@ struct PlantList: View {
     @State private var showFavoritesOnly = false
     
     var filteredPlants: [Plant] {
-        modelData.Plants.filter { plant in
+        modelData.plants.filter { plant in
             (!showFavoritesOnly || plant.isFavorite)
         }
     }

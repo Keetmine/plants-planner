@@ -29,7 +29,7 @@ struct PlantRow: View {
 
 struct PlantRow_Previews: PreviewProvider {
     
-    static var Plants = ModelData().Plants
+    static var Plants = ModelData().plants
     
     static var previews: some View {
         Group {

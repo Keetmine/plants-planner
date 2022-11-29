@@ -13,7 +13,7 @@ struct PlantDetail: View {
     var plant: Plant
     
     var PlantIndex: Int {
-        modelData.Plants.firstIndex(where: { $0.id == plant.id })!
+        modelData.plants.firstIndex(where: { $0.id == plant.id })!
     }
     
     var body: some View {
@@ -33,7 +33,7 @@ struct PlantDetail: View {
                     Text(plant.name)
                         .font(.subheadline)
                     Spacer()
-                    FavoriteButton(isSet: $modelData.Plants[PlantIndex].isFavorite)
+                    FavoriteButton(isSet: $modelData.plants[PlantIndex].isFavorite)
                 }
                 
                 Divider()
@@ -58,7 +58,7 @@ struct PlantDetail_Previews: PreviewProvider {
     static let modelData = ModelData()
 
     static var previews: some View {
-        PlantDetail(plant: ModelData().Plants[0])
+        PlantDetail(plant: ModelData().plants[0])
             .environmentObject(modelData)
     }
 }
