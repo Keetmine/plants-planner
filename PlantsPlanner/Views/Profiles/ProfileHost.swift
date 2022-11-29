@@ -13,7 +13,7 @@ struct ProfileHost: View {
     @State private var draftProfile = Profile.default
 
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .leading, spacing: 20) {
             HStack {
                 if editMode?.wrappedValue == .active {
                     Button("Cancel", role: .cancel) {

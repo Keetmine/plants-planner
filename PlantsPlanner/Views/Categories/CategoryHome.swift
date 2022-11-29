@@ -8,26 +8,20 @@
 import SwiftUI
 
 struct CategoryHome: View {
-
     @EnvironmentObject var modelData: ModelData
     @State private var showingProfile = false
 
     var body: some View {
         NavigationView {
             List {
-                PageView(pages: modelData.features.map { FeatureCard(plant: $0) })
+                PageView(pages: modelData.features.map {FeatureCard(plant: $0) })
                     .aspectRatio(3 / 2, contentMode: .fit)
                     .listRowInsets(EdgeInsets())
-
                 
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
-                    CategoryRow(
-                        categoryName: key,
-                        items: modelData.categories[key]!
-                    )
+                    CategoryRow(categoryName: key,items: modelData.categories[key]!)
                 }
                 .listRowInsets(EdgeInsets())
-
             }
             .listStyle(.inset)
             .navigationTitle("Featured")

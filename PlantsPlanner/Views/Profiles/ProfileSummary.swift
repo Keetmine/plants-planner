@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileSummary: View {
     @EnvironmentObject var modelData: ModelData
-    var profile = Profile.default
+    var profile: Profile
     
     var body: some View {
         ScrollView {
@@ -17,6 +17,7 @@ struct ProfileSummary: View {
                 Text(profile.username)
                     .bold()
                     .font(.title)
+                
                 Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
                 Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
                 Text("Goal Date: ") + Text(profile.goalDate, style: .date)
@@ -43,13 +44,13 @@ struct ProfileSummary: View {
                 Divider()
 
                 VStack(alignment: .leading) {
-                  Text("Recent Hikes")
-                      .font(.headline)
+                    Text("Recent Hikes")
+                        .font(.headline)
 
-                  HikeView(hike: modelData.hikes[0])
+                    HikeView(hike: modelData.hikes[0])
                 }
-                
             }
+            .padding()
         }
     }
 }

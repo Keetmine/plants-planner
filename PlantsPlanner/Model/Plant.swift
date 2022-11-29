@@ -14,8 +14,8 @@ struct Plant: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool
     var isFeatured: Bool
-    var category: Category
     
+    var category: Category
     enum Category: String, CaseIterable, Codable {
         case flowers = "Flowers"
         case plant = "Plant"
@@ -27,7 +27,6 @@ struct Plant: Hashable, Codable, Identifiable {
     var image: Image {
      Image(imageName)
     }
-    
     var featureImage: Image? {
         isFeatured ? Image(imageName + "_featured") : nil
     }

@@ -28,13 +28,12 @@ struct PlantRow: View {
 }
 
 struct PlantRow_Previews: PreviewProvider {
-    
-    static var Plants = ModelData().plants
+    static var plants = ModelData().plants
     
     static var previews: some View {
         Group {
-            PlantRow(plant: Plants[0])
-            PlantRow(plant: Plants[1])
+            PlantRow(plant: plants[0])
+            PlantRow(plant: plants[1])
         }
         .previewLayout(.fixed(width: 300, height: 70))
 

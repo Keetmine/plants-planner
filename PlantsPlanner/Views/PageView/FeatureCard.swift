@@ -45,7 +45,6 @@ struct TextOverlay: View {
     }
 }
 
-
 struct FeatureCard_Previews: PreviewProvider {
     static var previews: some View {
         FeatureCard(plant: ModelData().features[0])

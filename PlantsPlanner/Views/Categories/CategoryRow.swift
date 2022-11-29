@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CategoryRow: View {
-    
     var categoryName: String
     var items: [Plant]
     
@@ -21,11 +20,11 @@ struct CategoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 0) {
-                    ForEach(items) { Plant in
+                    ForEach(items) { plant in
                         NavigationLink {
-                            PlantDetail(plant: Plant)
+                            PlantDetail(plant: plant)
                         } label: {
-                            CategoryItem(plant: Plant)
+                            CategoryItem(plant: plant)
                         }
                     }
                 }
@@ -36,7 +35,6 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Previews: PreviewProvider {
-    
     static var plants = ModelData().plants
     
     static var previews: some View {

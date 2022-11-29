@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PlantList: View {
-    
     @EnvironmentObject var modelData: ModelData
     @State private var showFavoritesOnly = false
     
@@ -25,11 +24,11 @@ struct PlantList: View {
                     Text("Favorites only")
                 }
                 
-                ForEach(filteredPlants) { Plant in
+                ForEach(filteredPlants) { plant in
                     NavigationLink {
-                        PlantDetail(plant: Plant)
+                        PlantDetail(plant: plant)
                     } label: {
-                        PlantRow(plant: Plant)
+                        PlantRow(plant: plant)
                     }
                 }
             }

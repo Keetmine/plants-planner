@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CategoryItem: View {
-    
     var plant: Plant
     
     var body: some View {
