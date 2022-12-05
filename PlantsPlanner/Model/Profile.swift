@@ -6,14 +6,24 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Profile {
     var username: String
     var prefersNotifications = true
     var seasonalPhoto = Season.winter
     var goalDate = Date()
+    
+    var location = ""
+    var climate = ""
+    
+    var imageName: String
+    var image: Image {
+     Image(imageName)
+    }
+    
+    static let `default` = Profile(username: "keetmine", imageName: "peach")
 
-    static let `default` = Profile(username: "keetmine")
 
     enum Season: String, CaseIterable, Identifiable {
         case spring = "🌷"

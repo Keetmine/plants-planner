@@ -10,45 +10,85 @@ import SwiftUI
 struct ProfileSummary: View {
     @EnvironmentObject var modelData: ModelData
     var profile: Profile
+
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
+    @State private var isDarkModeOn = false
+    @State private var isNotificationsOn = false
+
+    func setAppTheme(){
+        if (colorScheme == .dark)
+         {
+           isDarkModeOn = true
+         }
+         else {
+           isDarkModeOn = false
+         }
+        
+        changeDarkMode(state: isDarkModeOn)
+    }
+    func changeDarkMode(state: Bool){
+        (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first!.overrideUserInterfaceStyle = state ? .dark : .light
+              UserDefaultsUtils.shared.setDarkMode(enable: state)
+    }
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 10) {
-                Text(profile.username)
-                    .bold()
-                    .font(.title)
-                
-                Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
-                Text("Seasonal Photos: \(profile.seasonalPhoto.rawValue)")
-                Text("Goal Date: ") + Text(profile.goalDate, style: .date)
-                     
-                Divider()
+                HStack {
+                    profile.image
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 70, height: 70)
+                        .cornerRadius(10)
+                        .padding(.trailing, 10)
 
-                VStack(alignment: .leading) {
-                    Text("Completed Badges")
-                        .font(.headline)
-
-                    ScrollView(.horizontal) {
-                        HStack {
-                            HikeBadge(name: "First Hike")
-                            HikeBadge(name: "Earth Day")
-                                .hueRotation(Angle(degrees: 90))
-                            HikeBadge(name: "Tenth Hike")
-                                .grayscale(0.5)
-                                .hueRotation(Angle(degrees: 45))
-                        }
-                        .padding(.bottom)
+                    VStack(alignment: .leading) {
+                        Text(profile.username + " " + profile.seasonalPhoto.rawValue)
+                            .bold()
+                            .font(.title)
+                        EditButton()
                     }
                 }
                 
-                Divider()
+                Spacer()
+                
+                Text("Goal Date: ") + Text(profile.goalDate, style: .date)
 
-                VStack(alignment: .leading) {
-                    Text("Recent Hikes")
-                        .font(.headline)
-
-                    HikeView(hike: modelData.hikes[0])
+                Text("Personalization")
+                    .font(.headline)
+                
+                GroupBox {
+                    if (profile.location != "") {
+                        HStack{
+                            Text("Location: ")
+                            Spacer()
+                            Text(profile.location)
+                        }
+                        Divider()
+                    }
+                    HStack{
+                        Text("Climate: ")
+                        Spacer()
+                        if (profile.location != "") {
+                            Text(profile.climate)
+                        } else {
+                            Button("Add hardiness zone", action: {})
+                        }
+                    }
                 }
+                
+                Spacer()
+                
+                Text("Settings")
+                    .font(.headline)
+                
+                GroupBox {
+                    Toggle("Dark theme", isOn: $isDarkModeOn).onChange(of: isDarkModeOn) { (state)  in
+                        changeDarkMode(state: state)
+                    }
+                    Toggle("Enable Notifications", isOn: $isNotificationsOn)
+                }
+                
             }
             .padding()
         }

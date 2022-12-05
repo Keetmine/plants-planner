@@ -14,10 +14,6 @@ struct CategoryHome: View {
     var body: some View {
         NavigationView {
             List {
-                PageView(pages: modelData.features.map {FeatureCard(plant: $0) })
-                    .aspectRatio(3 / 2, contentMode: .fit)
-                    .listRowInsets(EdgeInsets())
-                
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     CategoryRow(categoryName: key,items: modelData.categories[key]!)
                 }
